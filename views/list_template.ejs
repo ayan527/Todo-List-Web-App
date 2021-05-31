@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List App</title>
+</head>
+<body>
+  <h1>💙 Welcome to Todo List Application 💙</h1>
+  <br><br>
+  
+  <% if(weekday === 'Sunday' || weekday === 'Saturday') { %>
+    <h2 style="color: green;"><%= day%></h2>
+  <% } else { %>
+    <h2 style="color: red;"><%= day%></h2>
+  <% } %>
+  
+  <br>
+  
+  <% for(let index = 0; index < todoList.length; index++){ %>
+    <h3><li><%= todoList[index] %></li></h3>
+  <% } %>
+
+  <br>
+
+  <form action="/" method="POST">
+    <input type="text" name="newItem" id="new-item" autocomplete="off">
+    <button type="submit">Add</button>
+  </form>
+</body>
+</html>
